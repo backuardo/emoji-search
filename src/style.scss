@@ -1,13 +1,44 @@
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
 body, html {
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, #b6f9f9 0%,#bcf6e7 40%,#beffed 100%);
-    height: 100%;
+  font-family: "Roboto", sans-serif;
+  background: $white;
+  color: $black;
+  padding: 0;
+  margin: 0;
 }
 
-.logo {
-    background-image: url('img/logo.svg');
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
+#search-bar {
+  input {
+    width: 100vw;
+    height: 15vh;
+    color: rgba( $black, 0.8 );
+    font-size: 4em;
+    padding-left: 16px;
+  }
 }
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#emoji-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.emoji {
+  flex-basis: 48px;
+  font-size: 2.4em;
+  margin: 2px;
+
+  :hover {
+    background-color: rgba( $black, 0.5 );
+    cursor: pointer;
+  }
+}
+
