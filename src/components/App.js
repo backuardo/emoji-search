@@ -27,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <div id="app">
+        <a href="/"><h1>emojifun.surge.sh</h1></a>
         <SearchBar onChange={this.search} />
         <div id="emoji-section">
           {this.state.results
