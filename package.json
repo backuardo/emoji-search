@@ -2,7 +2,7 @@
   "name": "emoji-fun",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "https://github.com/beneisnr/emoji-fun.git",
+  "repository": "https://github.com/beneisnr/emoji-search.git",
   "author": "Ben Eisner",
   "license": "MIT",
   "scripts": {
