@@ -52,12 +52,28 @@ body, html {
   background-color: rgba( $black, 0.02 );
   box-shadow: 0 2px 10px 0 rgba( $black, 0.2);
   color: rgba( $black, 0.5 );
+
+  .emoji-title {
+    display: inline;
+  }
+
+  .hint {
+    color: rgba( $black, 0.7 );
+    display: none;
+  }
 }
 
 .emoji-container:hover {
   background-color: rgba( $black, 0.07 );
-  color: rgba( $black, 0.8 );
   cursor: pointer;
+
+  .hint {
+    display: inline;
+  }
+
+  .emoji-title {
+    display: none;
+  }
 }
 
 .emoji {

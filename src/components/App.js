@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Clipboard from 'clipboard';
 import FuzzySearch from '../FuzzySearch';
 import SearchBar from './SearchBar';
 import Emoji from './Emoji';
@@ -8,6 +9,14 @@ class App extends Component {
     super(props);
     this.state = { results: {} };
     this.fuzzy = new FuzzySearch();
+  }
+
+  componentDidMount() {
+    this.clipboard = new Clipboard('.emoji');
+  }
+
+  componentWillUnmount() {
+    this.clipboard.destroy();
   }
 
   search = (searchTerm) => {
@@ -22,7 +31,7 @@ class App extends Component {
         <div id="emoji-section">
           {this.state.results
             && Object.values(this.state.results)
-              .map(emoji => <Emoji emoji={emoji} />)}
+              .map(emoji => <Emoji emoji={emoji} key={emoji.title} />)}
         </div>
       </div>
     );
